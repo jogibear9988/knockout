@@ -1,7 +1,7 @@
 (function() {
 
 ko.bindingHandlers['checked'] = {
-    'after': ['value', 'attr'],
+    'after': ['value', 'attr', 'property'],
     'init': function (element, valueAccessor, allBindings) {
         var checkedValue = ko.pureComputed(function() {
             // Treat "value" like "checkedValue" when it is included with "checked" binding
